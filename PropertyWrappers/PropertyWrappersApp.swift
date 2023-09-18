@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct PropertyWrappersApp: App {
+    
+    let taskList = TaskList() // Create the shared task list
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(taskList) // Inject the shared task list
         }
     }
+    
+    
 }
